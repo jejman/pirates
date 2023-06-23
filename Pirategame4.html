@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pirategame4css.css">
+</head>
+<body>
+    <img src="images/giphy.gif">
+
+    <div>
+    <p id="typing-text"> </p>
+
+    <button> <a href="pirategame5.html">Get on the island</a></button>
+    <button><a href="PIRATEGAME3.html">Leave the island and look for a doctor</a> </button>
+</div>
+</body>
+<script>
+const text = "The treasure map led you to an island with the treasure on it but one of your crewmates has fallen sick and needs a doctor"
+let index = 0;
+
+function type() {
+  const typingText = document.getElementById("typing-text");
+
+  if (index < text.length) {
+    typingText.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, 100); // Change the delay (in milliseconds) to adjust typing speed
+  }
+}
+
+type();
+</script>
+</html>

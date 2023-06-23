@@ -1,0 +1,48 @@
+
+
+    
+    <!-- <img src="images/v7qo6pj8pn3gvdfn.jpg" alt="" srcset="" class="FIrstpagebackground"> -->
+<!-- 
+           <div class="input">
+          <h1>Enter Your Name</h1>
+   
+    
+        <input type="text" id="input" class="kk">
+        <div>
+         <button class="button" onclick="storeInformation()"><a href="pirategame2.html">Enter Game</a></button> 
+        <button class="button" > I'm a Coward</button>
+
+           
+
+    </div>
+    </div> -->
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>User Input Example</title>
+      <link rel="stylesheet" href="pirategamecss.css">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+    <body>
+
+        <div class="input">
+      <input type="text" id="userInput" placeholder="Enter your Name">
+      <div>
+      <button onclick="storeAndRedirect()">Enter Game</button>
+      <button><a href="PIRATEGAME3.html"> I'm a Coward</a></button>
+    </div>
+
+    </div>
+    
+      <script>
+        function storeAndRedirect() {
+          var userInput = document.getElementById('userInput').value;
+          sessionStorage.setItem('userInput', userInput);
+          window.location.href = "pirategame2.html";
+        }
+      </script>
+    </body>
+    </html>
+    

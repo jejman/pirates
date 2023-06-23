@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pirategame3css.css">
+</head>
+<body>
+      <img src="images/3801f1de2588915047ad319a25ef309b.gif" alt="">
+    <div>
+
+         <p id="display" >  </p>
+
+        </div>
+    
+</body>
+
+
+<script>
+    window.onload = function() {
+      var userInput = sessionStorage.getItem('userInput');
+      userInput=userInput.toUpperCase()
+      document.getElementById('display').textContent = `${userInput}, Your Creamates Mutined because you decided not to take the treasure and you have to walk the plank`;
+
+      
+    };
+    
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>` i am ${userInput}`</P> 
+</body>
+<script src="pirategame javascrip.js"></script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display User Input</title>
+  <link rel="stylesheet" href="pirategame2css.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <img src="images/bbab7e71e013f5f9a4c786d0d2df94b5.gif";>
+    <div>
+    <p id="display"></p>
+  </div>
+
+  <div>
+    <button class="btn btn-outline-secondary"><a href="Pirategame4.html">Take it</a></button>
+    <button><a href="PIRATEGAME3.html">Leave it</a></button>
+  </div>
+
+  <script>
+    window.onload = function() {
+      var userInput = sessionStorage.getItem('userInput');
+      userInput =`${userInput} You're the captain of this ship and you have just defeated blackbeard. On Blackbeard ship you found a treasure map`.toUpperCase();
+
+      let index = 0;
+      function type() {
+        const typingText = document.getElementById("display");
+
+        if (index < userInput.length) {
+          typingText.textContent += userInput.charAt(index);
+          index++;
+          setTimeout(type, 100); // Change the delay (in milliseconds) to adjust typing speed
+        }
+      }
+
+      type();
+    };
+  </script>
+  <script src="pirategame2javascript.js"></script> <!-- Make sure to provide the correct file path to your JavaScript file -->
+</body>
+</html>
